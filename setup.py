@@ -6,7 +6,8 @@ setup(
     packages=['swaggerreader',],
     license='MIT',
     install_requires=[
-        'requests'
+        'requests',
+        'json'
     ],
     url='https://github.com/gatneil/SwaggerReader'
 )
