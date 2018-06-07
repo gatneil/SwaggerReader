@@ -70,12 +70,12 @@ for path in paths:
             if "schema" in paths[path][verb]["responses"][response]:
                 if "type" in paths[path][verb]["responses"][response]["schema"]:
                     if paths[path][verb]["responses"][response]["schema"]["type"] == "array":
-                        # (*** TODO ***) what does it even mean for the response to be an array? JSON doesn't have [] as the outermost element
                         res = [get_full_def(paths[path][verb]["responses"][response]["schema"]["items"]["$ref"])]
                 else:
                     res = get_full_def(paths[path][verb]["responses"][response]["schema"]["$ref"])
-                    print(json.dumps(res, indent=2))
-                    print("")
+
+                print(json.dumps(res, indent=2))
+                print("")
 
         print("")
 
